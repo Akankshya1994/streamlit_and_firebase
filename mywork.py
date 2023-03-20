@@ -15,7 +15,6 @@ elif(mymenu=='Information'):
         if k:
             import firebase_admin
             from firebase_admin import credentials
-            st.session_state['k']=True
             from firebase_admin import db
             d={"Name":name,"Age":age,"Salary":salary}
             e="/"+emp_id

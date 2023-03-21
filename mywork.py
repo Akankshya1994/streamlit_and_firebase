@@ -11,18 +11,18 @@ elif(mymenu=='Information'):
         name=st.text_input('Enter Employee Name')
         age=st.slider('Enter Employee Age')
         salary=st.slider('Choose Salary')
-        k=st.form_submit_button('Submit')
-        if k:
+        m=st.form_submit_button('Submit')
+        if m:
             import firebase_admin
             from firebase_admin import credentials
             from firebase_admin import db
-            if 'k' not in st.session_state:
-                st.session_state['k']=True
+            if 'm' not in st.session_state:
+                st.session_state['m']=True
                 cred = credentials.Certificate("streamlitkey.json.json")
                 app=firebase_admin.initialize_app(cred,{'databaseURL':'https://streamlit-and-firebase-default-rtdb.europe-west1.firebasedatabase.app/'})
-                d={"Name":name,"Age":age,"Salary":salary}
-                e="/"+emp_id
-                ref=db.reference(e)
-                ref.update(d)
+         d={"Name":name,"Age":age,"Salary":salary}
+         e="/"+emp_id
+         ref=db.reference(e)
+         ref.update(d)
             
         

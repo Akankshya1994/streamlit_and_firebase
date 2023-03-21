@@ -20,9 +20,9 @@ elif(mymenu=='Information'):
                 st.session_state['m']=True
                 cred = credentials.Certificate("streamlitkey.json.json")
                 app=firebase_admin.initialize_app(cred,{'databaseURL':'https://streamlit-and-firebase-default-rtdb.europe-west1.firebasedatabase.app/'})
-         d={"Name":name,"Age":age,"Salary":salary}
-         e="/"+emp_id
-         ref=db.reference(e)
-         ref.update(d)
+        d={"Name":name,"Age":age,"Salary":salary}
+        e="/"+emp_id
+        ref=db.reference(e)
+        ref.update(d)
             
         

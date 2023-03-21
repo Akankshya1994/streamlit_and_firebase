@@ -16,8 +16,8 @@ elif(mymenu=='Information'):
             import firebase_admin
             from firebase_admin import credentials
             from firebase_admin import db
-            if 'm' not in st.session_state:
-                st.session_state['m']=True
+            if 'k' not in st.session_state:
+                st.session_state['k']=True
                 cred = credentials.Certificate("streamlitkey.json.json")
                 app=firebase_admin.initialize_app(cred,{'databaseURL':'https://streamlit-and-firebase-default-rtdb.europe-west1.firebasedatabase.app/'})
         d={"Name":name,"Age":age,"Salary":salary}
